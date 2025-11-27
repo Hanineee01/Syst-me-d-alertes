@@ -1,11 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using AlertesApi.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// ==================== CONNEXION MARIADB ====================
+builder.Services.AddDbContext<AlertesContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("MariaDB"),
+        new MariaDbServerVersion(new Version(10, 4, 32))
+    ));
+// ===========================================================
 
 var app = builder.Build();
 

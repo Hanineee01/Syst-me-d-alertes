@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Système_d_alertes.Controllers
+namespace AlertesApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

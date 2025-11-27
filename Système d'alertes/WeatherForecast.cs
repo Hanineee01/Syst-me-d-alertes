@@ -1,4 +1,4 @@
-namespace Système_d_alertes
+namespace AlertesApi
 {
     public class WeatherForecast
     {

@@ -1,6 +1,6 @@
-@Système_d_alertes_HostAddress = http://localhost:5177
+@AlertesApi_HostAddress = http://localhost:5177
 
-GET {{Système_d_alertes_HostAddress}}/weatherforecast/
+GET {{AlertesApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
