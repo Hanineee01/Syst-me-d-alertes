@@ -1,0 +1,6 @@
+@Système_d_alertes_HostAddress = http://localhost:5177
+
+GET {{Système_d_alertes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
