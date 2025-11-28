@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using AlertesApi.Data;
 using AlertesApi.Models;
+using Microsoft.AspNetCore.SignalR;
+using AlertesApi.Hubs;
 
 namespace AlertesApi.Controllers
 {
@@ -10,10 +12,12 @@ namespace AlertesApi.Controllers
     public class AlertesController : ControllerBase
     {
         private readonly AlertesContext _context;
+        private readonly IHubContext<AlertesHub> _hubContext;
 
-        public AlertesController(AlertesContext context)
+        public AlertesController(AlertesContext context, IHubContext<AlertesHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         // GET: api/Alertes
@@ -44,6 +48,10 @@ namespace AlertesApi.Controllers
             _context.Alertes.Add(alerte);
             await _context.SaveChangesAsync();
 
+            // === ENVOI EN TEMPS RÉEL À TOUS LES POSTES CONNECTÉS ===
+            await _hubContext.Clients.Group("Tous").SendAsync("ReceiveAlerte", alerte);
+            // ========================================================
+
             return CreatedAtAction(nameof(GetAlerte), new { id = alerte.Id }, alerte);
         }
 
@@ -71,6 +79,9 @@ namespace AlertesApi.Controllers
                 throw;
             }
 
+            // Optionnel : envoyer aussi la mise à jour en temps réel
+            await _hubContext.Clients.Group("Tous").SendAsync("UpdateAlerte", alerte);
+
             return NoContent();
         }
 
@@ -86,6 +97,9 @@ namespace AlertesApi.Controllers
 
             _context.Alertes.Remove(alerte);
             await _context.SaveChangesAsync();
+
+            // Optionnel : notifier la suppression
+            await _hubContext.Clients.Group("Tous").SendAsync("DeleteAlerte", id);
 
             return NoContent();
         }
