@@ -1,6 +1,10 @@
 {
   "ConnectionStrings": {
+<<<<<<< HEAD
     "MariaDB": "Server=localhost;Port=3306;Database=systeme_alertes;User=SwitchC;Password=3BIoEE2O_gbbq/F!;"
+=======
+    "MariaDB": "Server=localhost;Port=3306;Database=systeme_alertes;User=your_username;Password=your_password;"
+>>>>>>> 47b6c49c3a0a910821d5d1f4d3f5fcca2ac5fe95
   },
   "Logging": {
     "LogLevel": {
