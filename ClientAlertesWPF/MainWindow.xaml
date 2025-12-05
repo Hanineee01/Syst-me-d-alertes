@@ -1,8 +1,19 @@
 ﻿<Window x:Class="ClientAlertesWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+<<<<<<< HEAD
         Title="Alertes" Height="1" Width="1"
         WindowStyle="None" ShowInTaskbar="False"
         Loaded="Window_Loaded">
     <Grid />
+=======
+        Title="Système d'alertes Switch"
+        Height="1" Width="1"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        Loaded="Window_Loaded">
+    <Grid>
+        <!-- Rien du tout – on utilise uniquement les toasts Windows natifs -->
+    </Grid>
+>>>>>>> 6205666af16cf0d558b6c06f4c92f1cfa67fd098
 </Window>

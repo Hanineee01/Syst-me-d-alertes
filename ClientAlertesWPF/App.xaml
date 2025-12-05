@@ -1,7 +1,12 @@
 ﻿<Application x:Class="ClientAlertesWPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+<<<<<<< HEAD
              xmlns:tb="clr-namespace:Hardcodet.Wpf.TaskbarNotification;assembly=Hardcodet.NotifyIcon.Wpf">
+=======
+             xmlns:tb="clr-namespace:Hardcodet.Wpf.TaskbarNotification;assembly=Hardcodet.Wpf.TaskbarNotification"
+             StartupUri="MainWindow.xaml">
+>>>>>>> 6205666af16cf0d558b6c06f4c92f1cfa67fd098
     <Application.Resources>
         <tb:TaskbarIcon x:Key="NotifyIcon"
                         ToolTipText="Système d'alertes Switch" />
