@@ -1,23 +1,12 @@
 ﻿<Window x:Class="ClientAlertesWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:tb="http://www.hardcodet.net/taskbar"
-        Title="Système d'alertes - Client"
-        Height="450" Width="800"
-        WindowState="Normal"
-        ShowInTaskbar="False"
-        Loaded="Window_Loaded">
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientAlertesWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <tb:TaskbarIcon x:Name="NotifyIcon"
-                        ToolTipText="Système d'alertes"
-                        DataContext="{Binding}"
-                        DoubleClickCommand="{Binding ShowWindowCommand}">
-            <tb:TaskbarIcon.ContextMenu>
-                <ContextMenu DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}">
-                    <MenuItem Header="Ouvrir" Command="{Binding ShowWindowCommand}"/>
-                    <MenuItem Header="Quitter" Command="{Binding ExitCommand}"/>
-                </ContextMenu>
-            </tb:TaskbarIcon.ContextMenu>
-        </tb:TaskbarIcon>
+
     </Grid>
 </Window>
