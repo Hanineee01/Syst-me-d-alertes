@@ -13,7 +13,7 @@ namespace ClientAlertesWPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Hide(); // cache la fenêtre mais garde l'icône vivante
         }
     }
 }

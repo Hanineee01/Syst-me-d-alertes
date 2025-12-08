@@ -3,10 +3,15 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>    <ImplicitUsings>enable</ImplicitUsings>
 =======
 	  <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
 	  <UseWPF>true</UseWPF>
+=======
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+>>>>>>> parent of 6205666 (Design)
     <ImplicitUsings>enable</ImplicitUsings>
 >>>>>>> 6076090afb5cee47de722d23dac1eacca9271f96
     <UseWPF>true</UseWPF>
@@ -14,27 +19,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Ressources\logo.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="10.0.0" />
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.7175" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251106002" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Ressources\logo.ico">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="Assets\logo.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+=======
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+>>>>>>> parent of 6205666 (Design)
   </ItemGroup>
 
 </Project>
