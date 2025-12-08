@@ -1,24 +1,24 @@
-﻿using System.Text;
+﻿using CommunityToolkit.WinUI.Notifications;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ClientAlertesWPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+
+            // Test toast simple au démarrage
+            ToastNotificationManagerCompat.OnActivated += toastArgs => { };
+
+            new ToastContentBuilder()
+                .AddText("Test toast – si tu vois ça, les toasts marchent !")
+                .AddButton(new ToastButton("OK", "test"))
+                .Show();
+
+            // Cache la fenêtre
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

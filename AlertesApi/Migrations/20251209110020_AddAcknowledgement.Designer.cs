@@ -6,15 +6,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Pomelo.EntityFrameworkCore.MySql.Extensions;
 
 #nullable disable
 
 namespace AlertesApi.Migrations
 {
     [DbContext(typeof(AlertesContext))]
-    [Migration("20251127150516_AjoutChampArchiveEtNomsTables")]
-    partial class AjoutChampArchiveEtNomsTables
+    [Migration("20251209110020_AddAcknowledgement")]
+    partial class AddAcknowledgement
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +22,28 @@ namespace AlertesApi.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("AlertesApi.Models.Acknowledgement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AlerteId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateLu")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("PosteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Acknowledgements");
+                });
 
             modelBuilder.Entity("AlertesApi.Models.Alerte", b =>
                 {

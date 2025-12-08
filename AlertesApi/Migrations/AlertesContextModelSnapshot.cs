@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-
 #nullable disable
-
 namespace AlertesApi.Migrations
 {
     [DbContext(typeof(AlertesContext))]
@@ -19,69 +17,50 @@ namespace AlertesApi.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
-
+            // Suppression de l'appel à MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
             modelBuilder.Entity("AlertesApi.Models.Alerte", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DateCreation")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<bool>("EstArchivee")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("EstLue")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Niveau")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("PosteIdDestinataire")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Titre")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Alertes");
-                });
-
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+                MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                b.Property<DateTime>("DateCreation")
+                    .HasColumnType("datetime(6)");
+                b.Property<bool>("EstArchivee")
+                    .HasColumnType("tinyint(1)");
+                b.Property<bool>("EstLue")
+                    .HasColumnType("tinyint(1)");
+                b.Property<string>("Message")
+                    .IsRequired()
+                    .HasColumnType("longtext");
+                b.Property<string>("Niveau")
+                    .IsRequired()
+                    .HasColumnType("longtext");
+                b.Property<int?>("PosteIdDestinataire")
+                    .HasColumnType("int");
+                b.Property<string>("Titre")
+                    .IsRequired()
+                    .HasColumnType("longtext");
+                b.HasKey("Id");
+                b.ToTable("Alertes");
+            });
             modelBuilder.Entity("AlertesApi.Models.Poste", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DerniereConnexion")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Nom")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TokenUnique")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Postes");
-                });
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+                MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                b.Property<DateTime>("DerniereConnexion")
+                    .HasColumnType("datetime(6)");
+                b.Property<string>("Nom")
+                    .IsRequired()
+                    .HasColumnType("longtext");
+                b.Property<string>("TokenUnique")
+                    .IsRequired()
+                    .HasColumnType("longtext");
+                b.HasKey("Id");
+                b.ToTable("Postes");
+            });
 #pragma warning restore 612, 618
         }
     }

@@ -12,24 +12,22 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AlertesContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("MariaDB"),
-        new MariaDbServerVersion(new Version(10, 4, 32))
+        new MySqlServerVersion(new Version(10, 4, 32))
     ));
 
 // SignalR
 builder.Services.AddSignalR();
 
-// === CORS PARFAIT POUR DÉVELOPPEMENT LOCAL (fichier HTML + file://) ===
+// CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("DevCorsPolicy", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.SetIsOriginAllowed(origin => true) // autorise TOUT, y compris file:// et origin null
+        policy.AllowAnyOrigin()
               .AllowAnyMethod()
-              .AllowAnyHeader()
-              .AllowCredentials(); // obligatoire pour SignalR
+              .AllowAnyHeader();
     });
 });
-// ======================================================================
 
 var app = builder.Build();
 
@@ -39,14 +37,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// === TOUJOURS METTRE UseCors AVANT UseAuthorization ===
-app.UseCors("DevCorsPolicy");
-// =======================================================
-
-app.UseHttpsRedirection();
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
+
 app.MapControllers();
-app.MapHub<AlertesHub>("/hubs/alertes");
+app.MapHub<AlertesHub>("/alerthub"); // Matcher le client
 
 app.Run();

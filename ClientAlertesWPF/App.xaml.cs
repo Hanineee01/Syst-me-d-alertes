@@ -2,6 +2,7 @@
 using Hardcodet.Wpf.TaskbarNotification;
 using CommunityToolkit.WinUI.Notifications;
 using System;
+using System.IO;
 using System.Windows;
 
 namespace ClientAlertesWPF
@@ -15,7 +16,7 @@ namespace ClientAlertesWPF
         {
             base.OnStartup(e);
 
-            // Ligne magique pour les toasts en .NET 8 WPF
+            // Ligne obligatoire pour les toasts
             ToastNotificationManagerCompat.OnActivated += toastArgs => { };
 
             tb = new TaskbarIcon
@@ -23,9 +24,16 @@ namespace ClientAlertesWPF
                 ToolTipText = "Système d'alertes actif"
             };
 
-            // Logo chargé depuis les ressources (marche à 100 %)
-            var iconUri = new Uri("pack://application:,,,/Resources/Icons/logo.ico");
-            tb.Icon = new System.Drawing.Icon(Application.GetResourceStream(iconUri)!.Stream);
+            // Chargement du logo par chemin relatif
+            string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Icons", "logo.ico");
+            if (File.Exists(iconPath))
+            {
+                tb.Icon = new System.Drawing.Icon(iconPath);
+            }
+            else
+            {
+                tb.ToolTipText += " (logo non trouvé)";
+            }
 
             // Menu Quitter
             var contextMenu = new System.Windows.Controls.ContextMenu();

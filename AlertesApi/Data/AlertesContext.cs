@@ -9,5 +9,6 @@ namespace AlertesApi.Data
 
         public DbSet<Alerte> Alertes => Set<Alerte>();
         public DbSet<Poste> Postes => Set<Poste>();
+        public DbSet<Acknowledgement> Acknowledgements => Set<Acknowledgement>();
     }
 }
