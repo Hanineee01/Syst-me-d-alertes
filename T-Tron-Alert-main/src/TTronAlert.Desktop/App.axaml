@@ -1,0 +1,77 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TTronAlert.Desktop.App"
+             RequestedThemeVariant="Default">
+
+    <TrayIcon.Icons>
+        <TrayIcons>
+            <TrayIcon ToolTipText="T-Tron Alert - Disconnected"
+                      IsVisible="True">
+                <TrayIcon.Menu>
+                    <NativeMenu>
+                        <NativeMenuItem Header="Exit" Click="Exit_Click" />
+                    </NativeMenu>
+                </TrayIcon.Menu>
+            </TrayIcon>
+        </TrayIcons>
+    </TrayIcon.Icons>
+
+    <Application.Styles>
+        <FluentTheme />
+
+        <Style Selector="Window">
+            <Setter Property="Background" Value="{DynamicResource SystemControlBackgroundAltHighBrush}" />
+        </Style>
+
+        <Style Selector="Border.alert-card">
+            <Setter Property="Background" Value="{DynamicResource SystemControlBackgroundChromeMediumBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Padding" Value="16" />
+            <Setter Property="Margin" Value="8" />
+        </Style>
+
+        <Style Selector="TextBlock.alert-title">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0,0,0,8" />
+        </Style>
+
+        <Style Selector="TextBlock.alert-message">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Margin" Value="0,0,0,8" />
+        </Style>
+
+        <Style Selector="TextBlock.alert-time">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Opacity" Value="0.7" />
+        </Style>
+
+        <Style Selector="Border.info">
+            <Setter Property="BorderBrush" Value="#2196F3" />
+        </Style>
+
+        <Style Selector="Border.warning">
+            <Setter Property="BorderBrush" Value="#FF9800" />
+        </Style>
+
+        <Style Selector="Border.critical">
+            <Setter Property="BorderBrush" Value="#F44336" />
+        </Style>
+
+        <Style Selector="TextBlock.info">
+            <Setter Property="Foreground" Value="#2196F3" />
+        </Style>
+
+        <Style Selector="TextBlock.warning">
+            <Setter Property="Foreground" Value="#FF9800" />
+        </Style>
+
+        <Style Selector="TextBlock.critical">
+            <Setter Property="Foreground" Value="#F44336" />
+        </Style>
+    </Application.Styles>
+
+</Application>

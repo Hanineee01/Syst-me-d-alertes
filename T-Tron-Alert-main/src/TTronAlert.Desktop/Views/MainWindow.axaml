@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TTronAlert.Desktop.ViewModels"
+        xmlns:views="using:TTronAlert.Desktop.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="TTronAlert.Desktop.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="T-Tron Alert"
+        Width="900"
+        Height="600"
+        MinWidth="600"
+        MinHeight="400">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto,*">
+
+        <Border Grid.Row="0"
+                Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                BorderThickness="0,0,0,1"
+                Padding="16,12">
+            <Grid ColumnDefinitions="*,Auto">
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="12">
+                    <TextBlock Text="T-Tron Alert"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"/>
+                    <Border Background="#4CAF50"
+                            CornerRadius="4"
+                            Padding="8,4">
+                        <TextBlock Text="{Binding ConnectionStatus}"
+                                   FontSize="12"
+                                   Foreground="White"/>
+                    </Border>
+                </StackPanel>
+
+                <ToggleButton Grid.Column="1"
+                              IsChecked="{Binding IsDarkTheme}"
+                              Content="🌙"
+                              Padding="8"
+                              ToolTip.Tip="Toggle Dark Mode"/>
+            </Grid>
+        </Border>
+
+        <ScrollViewer Grid.Row="1">
+            <ItemsControl ItemsSource="{Binding Alerts}" Padding="16">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <views:AlertCard />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,430 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\services\\alertservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\services\\alertservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\controllers\\alertescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\controllers\\alertescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\data\\alertescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\data\\alertescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\migrations\\20251127150516_ajoutchamparchiveetnomstables.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\migrations\\20251127150516_ajoutchamparchiveetnomstables.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\migrations\\20251127131831_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\migrations\\20251127131831_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\migrations\\20251127150516_ajoutchamparchiveetnomstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\migrations\\20251127150516_ajoutchamparchiveetnomstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\migrations\\alertescontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\migrations\\alertescontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\migrations\\20251127131831_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\migrations\\20251127131831_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\models\\acknowledgement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\models\\acknowledgement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\models\\poste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\models\\poste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\models\\alerte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\models\\alerte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\alertesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\alertesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251209110020_AddAcknowledgement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AlertesApi\\Migrations\\20251209110020_AddAcknowledgement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\clientalerteswpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\clientalerteswpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\alertesapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\alertesapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\viewmodels\\alertviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\viewmodels\\alertviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\clientalerteswpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}|ClientAlertesWPF\\ClientAlertesWPF.csproj|solutionrelative:clientalerteswpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|c:\\users\\user\\desktop\\syst-me-d-alertes\\alertesapi\\hubs\\alerteshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}|AlertesApi\\AlertesApi.csproj|solutionrelative:alertesapi\\hubs\\alerteshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlertServices.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\Services\\AlertServices.cs",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\Services\\AlertServices.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\Services\\AlertServices.cs",
+              "RelativeToolTip": "ClientAlertesWPF\\Services\\AlertServices.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwIAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:19:32.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\App.xaml.cs",
+              "RelativeToolTip": "ClientAlertesWPF\\App.xaml.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:19:01.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Program.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Program.cs",
+              "RelativeToolTip": "AlertesApi\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:51:56.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlertesContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Data\\AlertesContext.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Data\\AlertesContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Data\\AlertesContext.cs",
+              "RelativeToolTip": "AlertesApi\\Data\\AlertesContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:36:59.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlertesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Controllers\\AlertesController.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Controllers\\AlertesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Controllers\\AlertesController.cs",
+              "RelativeToolTip": "AlertesApi\\Controllers\\AlertesController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAADwv5UAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T14:39:17.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AlertesContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\AlertesContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Migrations\\AlertesContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\AlertesContextModelSnapshot.cs",
+              "RelativeToolTip": "AlertesApi\\Migrations\\AlertesContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:43:05.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20251127131831_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127131831_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Migrations\\20251127131831_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127131831_InitialCreate.Designer.cs",
+              "RelativeToolTip": "AlertesApi\\Migrations\\20251127131831_InitialCreate.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:53:39.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20251127150516_AjoutChampArchiveEtNomsTables.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.Designer.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.Designer.cs",
+              "RelativeToolTip": "AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:55:06.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251127150516_AjoutChampArchiveEtNomsTables.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.cs",
+              "RelativeToolTip": "AlertesApi\\Migrations\\20251127150516_AjoutChampArchiveEtNomsTables.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:42:47.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251127131831_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127131831_InitialCreate.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Migrations\\20251127131831_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251127131831_InitialCreate.cs",
+              "RelativeToolTip": "AlertesApi\\Migrations\\20251127131831_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:38:19.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Alerte.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Models\\Alerte.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Models\\Alerte.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Models\\Alerte.cs",
+              "RelativeToolTip": "AlertesApi\\Models\\Alerte.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:21:34.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Poste.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Models\\Poste.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Models\\Poste.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Models\\Poste.cs",
+              "RelativeToolTip": "AlertesApi\\Models\\Poste.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:44:26.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Acknowledgement.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Models\\Acknowledgement.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Models\\Acknowledgement.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Models\\Acknowledgement.cs",
+              "RelativeToolTip": "AlertesApi\\Models\\Acknowledgement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T10:59:05.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\appsettings.json",
+              "RelativeDocumentMoniker": "AlertesApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\appsettings.json",
+              "RelativeToolTip": "AlertesApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-08T09:53:09.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AlertesApi",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\AlertesApi.csproj",
+              "RelativeDocumentMoniker": "AlertesApi\\AlertesApi.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\AlertesApi.csproj",
+              "RelativeToolTip": "AlertesApi\\AlertesApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-09T12:41:22.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20251209110020_AddAcknowledgement.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251209110020_AddAcknowledgement.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Migrations\\20251209110020_AddAcknowledgement.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Migrations\\20251209110020_AddAcknowledgement.cs",
+              "RelativeToolTip": "AlertesApi\\Migrations\\20251209110020_AddAcknowledgement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T11:00:20.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\MainWindow.xaml",
+              "RelativeToolTip": "ClientAlertesWPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T08:52:37.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ClientAlertesWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:19:10.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClientAlertesWPF.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\ClientAlertesWPF.csproj",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\ClientAlertesWPF.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\ClientAlertesWPF.csproj",
+              "RelativeToolTip": "ClientAlertesWPF\\ClientAlertesWPF.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-08T13:15:44.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AlertesApi.http",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\AlertesApi.http",
+              "RelativeDocumentMoniker": "AlertesApi\\AlertesApi.http",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\AlertesApi.http",
+              "RelativeToolTip": "AlertesApi\\AlertesApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-12-09T08:44:52.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\AssemblyInfo.cs",
+              "RelativeToolTip": "ClientAlertesWPF\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:19:05.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\App.xaml",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\App.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\App.xaml",
+              "RelativeToolTip": "ClientAlertesWPF\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-08T13:12:15.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AlertViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\ViewModels\\AlertViewModel.cs",
+              "RelativeDocumentMoniker": "ClientAlertesWPF\\ViewModels\\AlertViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\ClientAlertesWPF\\ViewModels\\AlertViewModel.cs",
+              "RelativeToolTip": "ClientAlertesWPF\\ViewModels\\AlertViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:19:25.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AlertesHub.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Hubs\\AlertesHub.cs",
+              "RelativeDocumentMoniker": "AlertesApi\\Hubs\\AlertesHub.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Syst-me-d-alertes\\AlertesApi\\Hubs\\AlertesHub.cs",
+              "RelativeToolTip": "AlertesApi\\Hubs\\AlertesHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:37:35.98Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

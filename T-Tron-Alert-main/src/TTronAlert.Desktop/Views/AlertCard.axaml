@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:TTronAlert.Desktop.ViewModels"
+             x:Class="TTronAlert.Desktop.Views.AlertCard"
+             x:DataType="vm:AlertItemViewModel">
+    
+    <Border Name="AlertBorder" Classes="alert-card">
+        <StackPanel>
+            <Grid ColumnDefinitions="*,Auto">
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="8">
+                    <TextBlock Text="{Binding Title}"
+                               Classes="alert-title"/>
+                </StackPanel>
+                <Border Grid.Column="1"
+                        Background="#2196F3"
+                        CornerRadius="4"
+                        Padding="8,4">
+                    <TextBlock Text="{Binding LevelText}"
+                               FontSize="12"
+                               Foreground="White"/>
+                </Border>
+            </Grid>
+            <TextBlock Text="{Binding Message}"
+                       Classes="alert-message"/>
+            <TextBlock Text="{Binding TimeAgo}"
+                       Classes="alert-time"/>
+        </StackPanel>
+    </Border>
+    
+</UserControl>
