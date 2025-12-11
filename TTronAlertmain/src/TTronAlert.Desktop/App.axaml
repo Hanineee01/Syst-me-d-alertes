@@ -1,0 +1,21 @@
+<Application.Styles>
+	<FluentTheme />
+
+	<!-- ... styles existants ... -->
+
+	<!-- Styles pour levels (exemple personnalisé) -->
+	<Style Selector="Border.info">
+		<Setter Property="Background" Value="LinearGradient 0% 0% to 100% 100%, #2196F3, #0D47A1" />
+		<!-- Dégradé bleu -->
+	</Style>
+
+	<Style Selector="Border.warning">
+		<Setter Property="Background" Value="LinearGradient 0% 0% to 100% 100%, #FF9800, #EF6C00" />
+		<!-- Dégradé orange -->
+	</Style>
+
+	<Style Selector="Border.critical">
+		<Setter Property="Background" Value="LinearGradient 0% 0% to 100% 100%, #F44336, #D32F2F" />
+		<!-- Dégradé rouge -->
+	</Style>
+</Application.Styles>
