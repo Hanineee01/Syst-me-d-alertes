@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertesApi", "AlertesApi\AlertesApi.csproj", "{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAlertesWPF", "ClientAlertesWPF\ClientAlertesWPF.csproj", "{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EADDF3-1CEA-4797-A25B-B3D10C5958E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C466EE-7BAE-4C1B-A61F-4ECA6640F754}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A1D9CBC-3439-449D-9F78-90D7640D1FDC}
+	EndGlobalSection
+EndGlobal

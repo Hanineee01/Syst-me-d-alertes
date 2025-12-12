@@ -1,0 +1,12 @@
+﻿<Application x:Class="ClientAlertesWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="VioletFonce" Color="#4A0E80"/>
+        <SolidColorBrush x:Key="Rose" Color="#FF2B80"/>
+        <SolidColorBrush x:Key="BleuInfo" Color="#3777FF"/>
+        <SolidColorBrush x:Key="OrangeWarning" Color="#FF8C42"/>
+        <SolidColorBrush x:Key="RougeCritical" Color="#FF4B4B"/>
+    </Application.Resources>
+</Application>
