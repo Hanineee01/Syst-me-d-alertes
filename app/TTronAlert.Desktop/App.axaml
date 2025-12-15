@@ -3,41 +3,45 @@
              x:Class="TTronAlert.Desktop.App">
 	<Application.Styles>
 		<FluentTheme />
-
-		<!-- ... styles existants ... -->
-
-		<!-- Styles pour levels (exemple personnalisé) -->
+		<Style Selector="TextBlock">
+			<Setter Property="FontFamily" Value="Arial" />
+		</Style>
 		<Style Selector="Border.info">
 			<Setter Property="Background">
 				<Setter.Value>
 					<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-						<GradientStop Color="#2196F3" Offset="0" />
-						<GradientStop Color="#0D47A1" Offset="1" />
+						<GradientStop Color="#3777FF" Offset="0" />
+						<GradientStop Color="#0044CC" Offset="1" />
+						<!-- Variante plus foncée pour le dégradé -->
 					</LinearGradientBrush>
 				</Setter.Value>
 			</Setter>
 		</Style>
-
 		<Style Selector="Border.warning">
 			<Setter Property="Background">
 				<Setter.Value>
 					<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-						<GradientStop Color="#FF9800" Offset="0" />
-						<GradientStop Color="#EF6C00" Offset="1" />
+						<GradientStop Color="#FF8C42" Offset="0" />
+						<GradientStop Color="#CC5A00" Offset="1" />
+						<!-- Variante plus foncée -->
 					</LinearGradientBrush>
 				</Setter.Value>
 			</Setter>
 		</Style>
-
 		<Style Selector="Border.critical">
 			<Setter Property="Background">
 				<Setter.Value>
 					<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-						<GradientStop Color="#F44336" Offset="0" />
-						<GradientStop Color="#D32F2F" Offset="1" />
+						<GradientStop Color="#FF4B4B" Offset="0" />
+						<GradientStop Color="#CC0000" Offset="1" />
+						<!-- Variante plus foncée -->
 					</LinearGradientBrush>
 				</Setter.Value>
 			</Setter>
+		</Style>
+		<!-- Pour le texte blanc sur les bordures colorées -->
+		<Style Selector="Border.info TextBlock, Border.warning TextBlock, Border.critical TextBlock">
+			<Setter Property="Foreground" Value="#FFFFFF" />
 		</Style>
 	</Application.Styles>
 </Application>

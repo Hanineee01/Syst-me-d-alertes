@@ -1,201 +1,58 @@
-using System;
-using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Threading;
+using System;
 using TTronAlert.Desktop.ViewModels;
 
-namespace TTronAlert.Desktop.Views;
-
-public partial class AlertToastWindow : Window
+namespace TTronAlert.Desktop.Views
 {
-    private readonly DispatcherTimer _autoCloseTimer;
-    private readonly DispatcherTimer _animationTimer;
-    private const int AutoCloseDurationSeconds = 5;
-    private const int AnimationSteps = 20;
-    private const int AnimationInterval = 20;
-    private bool _isAnimating;
-
-    public AlertToastWindow()
+    public partial class AlertToastWindow : Window
     {
-        InitializeComponent();
-
-        // Enable layout rounding to avoid subpixel rendering blur
-        UseLayoutRounding = true;
-
-        _autoCloseTimer = new DispatcherTimer
+        public AlertToastWindow()
         {
-            Interval = TimeSpan.FromSeconds(AutoCloseDurationSeconds)
-        };
-        _autoCloseTimer.Tick += (s, e) => BeginClose();
+            InitializeComponent();
+            // Fermeture automatique après 15 secondes
+            DispatcherTimer.RunOnce(CloseWindow, TimeSpan.FromSeconds(15));
 
-        _animationTimer = new DispatcherTimer
+            // Ajout pour démarrer l'animation à l'ouverture
+            Opened += OnOpened;
+        }
+
+        private void OnOpened(object? sender, EventArgs e)
         {
-            Interval = TimeSpan.FromMilliseconds(AnimationInterval)
-        };
-    }
-
-    public void SetAlert(AlertItemViewModel alert)
-    {
-        DataContext = alert;
-
-        var border = this.FindControl<Border>("ToastBorder");
-        if (border != null)
-        {
-            border.Classes.Clear();
-            border.Classes.Add(alert.LevelClass);
-
-            // Ensure a TranslateTransform exists for smooth animations
-            if (border.RenderTransform == null || border.RenderTransform is not TranslateTransform)
+            ToastBorder.Opacity = 1;
+            if (ToastBorder.RenderTransform is TranslateTransform transform)
             {
-                border.RenderTransform = new TranslateTransform();
-            }
-
-            // Also enable layout rounding on the border
-            border.UseLayoutRounding = true;
-        }
-    }
-
-    public void PositionToast(int index)
-    {
-        var screens = Screens.All;
-        if (screens.Count == 0) return;
-
-        var screen = screens[0];
-        var workingArea = screen.WorkingArea;
-
-        const int margin = 20;
-        const int spacing = 12;
-        const int toastHeight = 160;
-
-        Position = new PixelPoint(
-            workingArea.Right - (int)Width - margin,
-            workingArea.Bottom - (toastHeight + margin) - (index * (toastHeight + spacing))
-        );
-    }
-
-    protected override async void OnOpened(EventArgs e)
-    {
-        base.OnOpened(e);
-        await AnimateIn();
-        _autoCloseTimer.Start();
-    }
-
-    private async Task AnimateIn()
-    {
-        if (_isAnimating) return;
-        _isAnimating = true;
-
-        var border = this.FindControl<Border>("ToastBorder");
-        if (border == null)
-        {
-            _isAnimating = false;
-            return;
-        }
-
-        var translateTransform = border.RenderTransform as TranslateTransform;
-        if (translateTransform == null)
-        {
-            translateTransform = new TranslateTransform();
-            border.RenderTransform = translateTransform;
-        }
-
-        var tcs = new TaskCompletionSource<bool>();
-        int step = 0;
-
-        _animationTimer.Tick += AnimationTick;
-        _animationTimer.Start();
-
-        void AnimationTick(object? s, EventArgs args)
-        {
-            step++;
-            double progress = (double)step / AnimationSteps;
-            progress = EaseOutCubic(progress);
-
-            // Use integer pixel values to avoid subpixel blur
-            var x = Math.Round(400 * (1 - progress));
-            translateTransform.X = x;
-            border.Opacity = progress;
-
-            if (step >= AnimationSteps)
-            {
-                _animationTimer.Stop();
-                _animationTimer.Tick -= AnimationTick;
-                _isAnimating = false;
-                tcs.SetResult(true);
+                transform.X = 0;
             }
         }
 
-        await tcs.Task;
-    }
-
-    private async Task AnimateOut()
-    {
-        if (_isAnimating) return;
-        _isAnimating = true;
-
-        var border = this.FindControl<Border>("ToastBorder");
-        if (border == null)
+        public void SetAlert(AlertItemViewModel viewModel)
         {
-            _isAnimating = false;
-            return;
+            DataContext = viewModel;
         }
 
-        var translateTransform = border.RenderTransform as TranslateTransform;
-        if (translateTransform == null)
+        private void CloseWindow()
         {
-            translateTransform = new TranslateTransform();
-            border.RenderTransform = translateTransform;
+            Dispatcher.UIThread.Post(() => this.Close());
         }
 
-        var tcs = new TaskCompletionSource<bool>();
-        int step = 0;
-
-        _animationTimer.Tick += AnimationTick;
-        _animationTimer.Start();
-
-        void AnimationTick(object? s, EventArgs args)
+        private void CloseButton_Click(object? sender, RoutedEventArgs e)
         {
-            step++;
-            double progress = (double)step / AnimationSteps;
-            progress = EaseInCubic(progress);
+            this.Close();
+        }
 
-            var x = Math.Round(400 * progress);
-            translateTransform.X = x;
-            border.Opacity = 1 - progress;
-
-            if (step >= AnimationSteps)
+        public void PositionToast(int index)
+        {
+            // Logique pour positionner le toast (par exemple, en bas à droite, empilés)
+            var screen = Screens.ScreenFromVisual(this);
+            if (screen != null)
             {
-                _animationTimer.Stop();
-                _animationTimer.Tick -= AnimationTick;
-                _isAnimating = false;
-                tcs.SetResult(true);
+                var workArea = screen.WorkingArea;
+                Position = new PixelPoint(workArea.Right - (int)Width - 20, workArea.Bottom - (int)Height - 20 - (index * ((int)Height + 10)));
             }
         }
-
-        await tcs.Task;
-    }
-
-    private static double EaseOutCubic(double t)
-    {
-        return 1 - Math.Pow(1 - t, 3);
-    }
-
-    private static double EaseInCubic(double t)
-    {
-        return t * t * t;
-    }
-
-    private async void BeginClose()
-    {
-        _autoCloseTimer.Stop();
-        await AnimateOut();
-        Close();
-    }
-
-    private void CloseButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        BeginClose();
     }
 }
