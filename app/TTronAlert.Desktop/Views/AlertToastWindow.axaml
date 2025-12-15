@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TTronAlert.Desktop.ViewModels"
+        x:Class="TTronAlert.Desktop.Views.AlertToastWindow"
+        x:DataType="vm:AlertItemViewModel"
+        SystemDecorations="None"
+        TransparencyLevelHint="None"
+        Background="Transparent"
+        CanResize="False"
+        ShowInTaskbar="False"
+        Topmost="True"
+        Width="420"
+        Height="120"
+        WindowStartupLocation="Manual">
+
+    <Border Name="ToastBorder"
+            Background="White"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="10"
+            Padding="12"
+            Opacity="0"
+            ClipToBounds="True">
+
+        <Border.RenderTransform>
+            <TranslateTransform X="400" Y="0"/>
+        </Border.RenderTransform>
+
+        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,*">
+            <Image Grid.RowSpan="2"
+                   Grid.Column="0"
+                   Source="avares://TTronAlert.Desktop/Assets/logo.png"
+                   Width="48"
+                   Height="48"
+                   Margin="0,0,12,0"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="0"
+                       Text="{Binding Title}"
+                       FontSize="16"
+                       FontWeight="Bold"
+                       Foreground="#111111"
+                       TextWrapping="Wrap"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="1"
+                       Text="{Binding Message}"
+                       FontSize="13"
+                       Foreground="#333333"
+                       TextWrapping="Wrap"
+                       MaxHeight="60"/>
+
+            <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Spacing="6">
+                <Border Background="White" BorderBrush="Black" BorderThickness="1" CornerRadius="6" Padding="8" HorizontalAlignment="Right">
+                    <TextBlock Text="{Binding LevelText}" FontSize="12" Foreground="#111111"/>
+                </Border>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1" CornerRadius="6" Padding="8" HorizontalAlignment="Right">
+                    <TextBlock Text="{Binding TimeAgo}" FontSize="12" Foreground="#666666"/>
+                </Border>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Window>

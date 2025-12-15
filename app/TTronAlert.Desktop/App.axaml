@@ -1,0 +1,43 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TTronAlert.Desktop.App">
+	<Application.Styles>
+		<FluentTheme />
+
+		<!-- ... styles existants ... -->
+
+		<!-- Styles pour levels (exemple personnalisé) -->
+		<Style Selector="Border.info">
+			<Setter Property="Background">
+				<Setter.Value>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+						<GradientStop Color="#2196F3" Offset="0" />
+						<GradientStop Color="#0D47A1" Offset="1" />
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+		<Style Selector="Border.warning">
+			<Setter Property="Background">
+				<Setter.Value>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+						<GradientStop Color="#FF9800" Offset="0" />
+						<GradientStop Color="#EF6C00" Offset="1" />
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+		<Style Selector="Border.critical">
+			<Setter Property="Background">
+				<Setter.Value>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+						<GradientStop Color="#F44336" Offset="0" />
+						<GradientStop Color="#D32F2F" Offset="1" />
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Application.Styles>
+</Application>

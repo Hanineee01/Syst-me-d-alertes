@@ -1,199 +1,178 @@
-# T-Tron-Alert
+# T-Tron Alert
 
-Système d'alertes en temps réel permettant d'envoyer des alertes à tous les postes connectés via une API et SignalR.
+Système d'alertes temps réel avec .NET 8, SignalR et Avalonia UI.
 
-## Architecture
+## Installation
 
-Le projet est composé de deux parties :
-
-### 1. AlertesApi (Backend)
-- **Framework**: ASP.NET Core 8.0 Web API
-- **Base de données**: MariaDB/MySQL avec Entity Framework Core
-- **Communication temps réel**: SignalR
-- **Documentation API**: Swagger/OpenAPI
-
-### 2. ClientAlertesWPF (Client Windows)
-- **Framework**: WPF .NET 8.0
-- **Architecture**: MVVM avec CommunityToolkit.Mvvm
-- **Icône système**: Hardcodet.NotifyIcon.Wpf
-- **Connexion API**: SignalR Client
-
-## Fonctionnalités
-
-- ✅ Envoi d'alertes via API REST
-- ✅ Diffusion en temps réel sur tous les postes connectés via SignalR
-- ✅ Client WPF avec icône dans la barre système
-- ✅ Notifications Windows (balloon tips)
-- ✅ Alertes sonores
-- ✅ Support de différents niveaux d'alerte (Info, Avertissement, Critique)
-
-## 🚀 Démarrage Rapide (Windows)
-
-Pour lancer rapidement le projet :
-1. Configurer la base de données dans `AlertesApi/appsettings.json`
-2. Exécuter `migrate-db.bat` pour créer la base de données
-3. Exécuter `start-all.bat` pour lancer l'API et le client
-4. Exécuter `test-alert.bat` pour envoyer une alerte de test
-
-Voir [LANCEMENT.md](LANCEMENT.md) pour plus de détails sur tous les fichiers batch disponibles.
-
-## Prérequis
-
-- .NET 8.0 SDK
-- MariaDB ou MySQL (pour l'API)
-- Windows 10/11 (pour le client WPF)
-
-**Note**: Les outils Entity Framework Core seront automatiquement installés lors de la première compilation ou migration grâce au manifeste d'outils local (`.config/dotnet-tools.json`).
+```bash
+git clone https://github.com/SulivanM/T-Tron-Alert.git
+cd T-Tron-Alert
+dotnet build
+```
 
 ## Configuration
 
-### Base de données
+### API (Backend)
 
-1. Configurer la chaîne de connexion dans `AlertesApi/appsettings.Development.json`:
+Modifier `api/TTronAlert.Api/appsettings.json`:
+
 ```json
 {
   "ConnectionStrings": {
-    "MariaDB": "Server=localhost;Port=3306;Database=systeme_alertes;User=votre_utilisateur;Password=votre_mot_de_passe;"
+    "DefaultConnection": "Server=localhost;Database=systeme_alertes;User=root;Password=votre_mdp;"
   }
 }
 ```
 
-2. Appliquer les migrations :
-```bash
-# Les outils Entity Framework seront restaurés automatiquement
-cd AlertesApi
-dotnet ef database update
-```
+### Client Desktop
 
-Ou utilisez le fichier batch Windows :
-```cmd
-migrate-db.bat
-```
+Modifier `app/TTronAlert.Desktop/appsettings.json`:
 
-### Client WPF
-
-Modifier l'URL du serveur dans `ClientAlertesWPF/ViewModels/MainViewModel.cs` (ligne 33) si nécessaire :
-```csharp
-.WithUrl("http://localhost:5177/hubs/alertes")
-```
-
-## Compilation
-
-### Compiler toute la solution :
-```bash
-dotnet build T-Tron-Alert.sln
-```
-
-### Compiler uniquement l'API :
-```bash
-cd AlertesApi
-dotnet build
-```
-
-### Compiler uniquement le client :
-```bash
-cd ClientAlertesWPF
-dotnet build
-```
-
-## Exécution
-
-### 🚀 Méthode rapide (Windows)
-
-Des fichiers batch (.bat) sont disponibles pour simplifier le lancement et les tests :
-
-- **`start-all.bat`** - Lance l'API et le client automatiquement
-- **`start-api.bat`** - Lance uniquement l'API
-- **`start-client.bat`** - Lance uniquement le client WPF
-- **`test-alert.bat`** - Envoie une alerte de test
-- **`test-alerts-all-levels.bat`** - Teste tous les niveaux d'alerte
-- **`build.bat`** - Compile la solution
-- **`clean.bat`** - Nettoie les fichiers de compilation
-- **`migrate-db.bat`** - Applique les migrations de base de données
-
-📖 Consultez [LANCEMENT.md](LANCEMENT.md) pour le guide complet d'utilisation des fichiers batch.
-
-### Démarrer l'API (manuel) :
-```bash
-cd AlertesApi
-dotnet run
-```
-
-L'API sera disponible sur `http://localhost:5177` (ou le port configuré).
-Swagger UI : `http://localhost:5177/swagger`
-
-### Démarrer le client (manuel) :
-```bash
-cd ClientAlertesWPF
-dotnet run
-```
-
-Le client démarrera en mode réduit avec une icône dans la barre système.
-
-## Utilisation de l'API
-
-### Envoyer une alerte :
-```http
-POST http://localhost:5177/api/Alertes
-Content-Type: application/json
-
+```json
 {
-  "titre": "Alerte importante",
-  "message": "Ceci est un test d'alerte",
-  "niveau": "Critique"
+  "AlertSystem": {
+    "WorkstationId": "poste-1",
+    "ApiBaseUrl": "http://localhost:62051",
+    "HubPath": "/alerthub",
+    "AutoReconnect": true
+  }
 }
 ```
 
-### Lister toutes les alertes :
-```http
-GET http://localhost:5177/api/Alertes
+**Note:** Chaque poste client doit avoir un `WorkstationId` unique (ex: "poste-1", "poste-2", etc.)
+
+## Démarrage
+
+### Démarrage rapide
+
+**Windows:**
+```bash
+start-all.bat      # Démarre API + Client
 ```
 
-### Récupérer une alerte spécifique :
-```http
-GET http://localhost:5177/api/Alertes/1
+**Linux/macOS:**
+```bash
+./start-all.sh     # Démarre API + Client
 ```
+
+### Démarrage manuel
+
+**1. Appliquer les migrations de base de données** (première fois uniquement) :
+```bash
+# Windows
+migrate-db.bat
+
+# Linux/macOS
+./migrate-db.sh
+```
+
+**2. Démarrer l'API** (Terminal 1) :
+```bash
+cd api/TTronAlert.Api
+dotnet run
+```
+
+**3. Démarrer le client** (Terminal 2, attendre ~10s que l'API démarre) :
+```bash
+cd app/TTronAlert.Desktop
+dotnet run
+```
+
+**URLs:**
+- API: `http://localhost:62051` (HTTP) ou `https://localhost:62050` (HTTPS)
+- Swagger: `http://localhost:62051/swagger`
+
+## Tester l'API
+
+Envoyer une alerte de test :
+
+```bash
+curl -X POST http://localhost:62051/api/alerts \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Test","message":"Message test","level":0,"targetWorkstation":"poste-1"}'
+```
+
+**Niveaux d'alerte disponibles :**
+- `0` = Info (bleu)
+- `1` = Warning (orange)
+- `2` = Critical (rouge)
 
 ## Structure du projet
 
 ```
 T-Tron-Alert/
-├── AlertesApi/                    # API Backend
-│   ├── Controllers/               # Contrôleurs API
-│   ├── Data/                      # Contexte Entity Framework
-│   ├── Hubs/                      # SignalR Hubs
-│   ├── Migrations/                # Migrations EF Core
-│   ├── Models/                    # Modèles de données
-│   └── Program.cs                 # Point d'entrée
-├── ClientAlertesWPF/              # Client WPF
-│   ├── ViewModels/                # ViewModels MVVM
-│   ├── MainWindow.xaml            # Fenêtre principale
-│   └── App.xaml                   # Application WPF
-└── T-Tron-Alert.sln              # Solution Visual Studio
+├── api/                             # 📡 Backend
+│   ├── TTronAlert.Api/              # API REST (.NET 8)
+│   │   ├── Controllers/             # Contrôleurs REST
+│   │   ├── Hubs/                    # Hubs SignalR
+│   │   ├── Services/                # Services métier
+│   │   ├── Data/                    # Contexte EF Core
+│   │   └── Migrations/              # Migrations de DB
+│   │
+│   └── TTronAlert.Shared/           # Bibliothèque partagée
+│       ├── Models/                  # Modèles de domaine
+│       ├── DTOs/                    # Objets de transfert
+│       └── Extensions/              # Extensions et helpers
+│
+├── app/                             # 💻 Client Desktop
+│   └── TTronAlert.Desktop/          # Application Avalonia
+│       ├── Configuration/           # Classes de configuration
+│       ├── Services/                # Services client
+│       ├── ViewModels/              # ViewModels MVVM
+│       ├── Views/                   # Vues Avalonia
+│       ├── Converters/              # Convertisseurs de valeurs
+│       ├── Assets/                  # Ressources (icônes, images)
+│       └── appsettings.json         # Configuration client
+│
+├── start-all.bat / start-all.sh     # Démarrage rapide
+├── migrate-db.bat / migrate-db.sh   # Migration de DB
+└── TTronAlert.sln                   # Solution .NET
 ```
 
-## Modèles de données
+## Fonctionnalités
 
-### Alerte
-- `Id`: Identifiant unique
-- `Titre`: Titre de l'alerte
-- `Message`: Message de l'alerte
-- `Niveau`: Info / Avertissement / Critique
-- `DateCreation`: Date de création
-- `EstLue`: Indicateur de lecture
-- `EstArchivee`: Indicateur d'archivage
-- `PosteIdDestinataire`: ID du poste destinataire (null = tous les postes)
+- ✅ **Alertes temps réel** via SignalR
+- ✅ **Multi-postes** avec ciblage par workstation ID
+- ✅ **3 niveaux d'alerte** (Info, Warning, Critical)
+- ✅ **Interface moderne** avec Avalonia UI
+- ✅ **Notifications toast** pour les alertes
+- ✅ **Système de configuration** flexible (appsettings.json)
+- ✅ **Reconnexion automatique** en cas de déconnexion
+- ✅ **Cross-platform** (Windows, Linux, macOS)
+- ✅ **API REST** documentée avec Swagger
 
-### Poste
-- `Id`: Identifiant unique
-- `Nom`: Nom du poste
-- `TokenUnique`: Token d'identification
-- `DerniereConnexion`: Date de dernière connexion
+## Configuration avancée
 
-## Sécurité
+### Variables d'environnement
 
-⚠️ **Important** : Ne pas commiter les fichiers `appsettings.Development.json` contenant des credentials réels en production.
+Le client Desktop supporte les variables d'environnement:
 
-## Licence
+```bash
+export DOTNET_ENVIRONMENT=Development
+export AlertSystem__WorkstationId=poste-2
+export AlertSystem__ApiBaseUrl=http://192.168.1.100:62051
+```
 
-Ce projet est un système d'alertes interne.
+### Configuration multi-postes
+
+Pour déployer sur plusieurs postes, créez un fichier `appsettings.json` unique pour chaque poste:
+
+**Poste 1:**
+```json
+{
+  "AlertSystem": {
+    "WorkstationId": "poste-1",
+    "ApiBaseUrl": "http://server-ip:62051"
+  }
+}
+```
+
+**Poste 2:**
+```json
+{
+  "AlertSystem": {
+    "WorkstationId": "poste-2",
+    "ApiBaseUrl": "http://server-ip:62051"
+  }
+}
+```
